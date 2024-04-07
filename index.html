@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><strong>Please open your developer console to see the output</strong></h1>
+    <div class="header">
+        <div class="headerContent">Rock, Paper, Scissors!</div>
+    </div>
+    <div class="body">
+        <div class="bodyCont">
+            <div class="name" id="inputDiv">
+                <input type="text" class="formField" id="playerName" placeholder="Enter your Name & press start to start game"></input>
+                <button id="playGame">Start Game!</button>
+            </div>
+            <div class="gameInfo hidden">
+                <div class="gameBanner"><strong>Game Stats</strong></div>
+                <div class="score">
+                    <div class="round">
+                        <span>Round: </span>
+                        <span class="roundVal"></span>
+                    </div>
+                    <div class="playerScore">
+                        <span class="playerName"></span>
+                        <span>: </span>
+                        <span class="pScore"></span>
+                    </div>
+                    <div class="compScore">
+                        <span class="compName">Computer</span>
+                        <span>: </span>
+                        <span class="cScore"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="gameResult hidden">
+                <h2 class="winner hidden"></h2>
+            </div>
+            <div class="gameLogo">
+                <img src="./icons/rock-paper-scissors.png" alt="">
+            </div>
+            <div class="gameBody hidden">
+                <div class="containerSelections">
+                    <span><strong>user Selection</strong></span>
+                    <div class="userSection">
+                        <div class="userchoice rock bounce2 shake" data-choice="Rock">
+                            <a href="#blank"><img src="./icons/stone.png" alt="rock" height="100px" width="100px"></a>
+                        </div>
+                        <div class="userchoice paper bounce2 shake" data-choice="Paper">
+                            <a href="#blank"><img src="./icons/old-paper.png" alt="paper" height="100px" width="100px"></a>
+                        </div>
+                        <div class="userchoice scissor bounce2 shake" data-choice="Scissors">
+                            <a href="#blank"><img src="./icons/cut.png" alt="Scissors" height="100px" width="100px"></a>
+                        </div>
+                    </div>
+                    <span><strong>Computer Selection</strong></span>
+                    <div class="compSection">
+                        <div class="compRock bounce2 shake" data-comp-choice="Rock">
+                            <img src="./icons/stone.png" alt="rock" height="100px" width="100px">
+                        </div>
+                        <div class="compPaper bounce2 shake" data-comp-choice="Paper">
+                            <img src="./icons/old-paper.png" alt="paper" height="100px" width="100px">
+                        </div>
+                        <div class="compScissors bounce2 shake" data-comp-choice="Scissors">
+                            <img src="./icons/cut.png" alt="Scissors" height="100px" width="100px">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="newGame hidden">Play Again</button>
+                    <button class="retry hidden">Retry</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span>The icons used are from flaticons please visit them for more quality icons</span>
+        <ul>
+            <li><a href="https://www.flaticon.com/free-icons/cut" title="cut icons" referrerpolicy="no-referrer">Cut icons created by Smashicons - Flaticon</a></li>
+            <li><a href="https://www.flaticon.com/free-icons/stone" title="stone icons" referrerpolicy="no-referrer">Stone icons created by Icongeek26 - Flaticon</a></li>
+            <li><a href="https://www.flaticon.com/free-icons/old-paper" title="old paper icons" referrerpolicy="no-referrer">Old paper icons created by Iconic Panda - Flaticon</a></li>
+            <li><a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors icons">Rock paper scissors icons created by Freepik - Flaticon</a></li>
+        </ul>
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>
